@@ -1,0 +1,8 @@
+{
+  "name": "modalcancel",
+  "description": "modalcancel the dialogs",
+  "uuid": "modalcancel@pikachunakapika",
+  "shell-version": [
+    "3.38"
+  ]
+}
