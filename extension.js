@@ -32,10 +32,10 @@ function removeOverride(name) {
     modalDialog.ModalDialog.prototype[name] = oldCalls[name];
 }
 
-function myOpen(params) {
+function my_init(params) {
     
-    oldCalls['open'].call(this, params);
-   
+    oldCalls['_init'].call(this, params);
+
     if (this.buttonLayout.get_children().length == 0) {
         this.addButton({ label: "Close",
             action: () => {
@@ -50,11 +50,11 @@ class Extension {
     }
 
     enable() {
-        registerOverride('open', myOpen);
+        registerOverride('_init', my_init);
     }
 
     disable() {
-        removeOverride('open');        
+        removeOverride('_init');
     }
 }
 
